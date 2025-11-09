@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Track your time where every hour is a precious gemstone. Transform time tracking into collecting rare stones at timestones.today" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta property="og:title" content="Time Stones - Every Hour is a Rare Gift" />
+		<meta property="og:description" content="Track your time where every hour is a precious gemstone. Transform time tracking into collecting rare stones at timestones.today" />
+		<meta property="og:url" content={Astro.site} />
+		<meta property="og:type" content="website" />
+		<meta name="theme-color" content="#0a0e27" />
+		<title>Time Stones - Every Hour is a Rare Gift</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	body {
+		min-height: 100vh;
+		background: linear-gradient(to bottom, #0a0e27, #1a1a2e);
+		position: relative;
+		overflow-x: hidden;
+	}
+
+	/* First layer of stars - small stars */
+	body::before {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 1px;
+		height: 1px;
+		background: transparent;
+		box-shadow: 
+			147px 231px white, 892px 45px white, 1456px 789px white, 234px 567px white,
+			1789px 234px white, 456px 891px white, 1234px 456px white, 789px 123px white,
+			1567px 890px white, 345px 678px white, 1890px 345px white, 678px 912px white,
+			1123px 567px white, 890px 234px white, 1456px 891px white, 234px 456px white,
+			1789px 123px white, 567px 789px white, 1234px 345px white, 891px 678px white,
+			298px 134px white, 1654px 892px white, 723px 456px white, 1389px 567px white,
+			456px 234px white, 1823px 678px white, 589px 891px white, 1156px 234px white,
+			823px 567px white, 1489px 123px white, 356px 789px white, 1723px 456px white,
+			689px 234px white, 1256px 891px white, 923px 567px white, 1589px 234px white,
+			123px 678px white, 1856px 891px white, 456px 123px white, 1189px 789px white,
+			789px 456px white, 1423px 234px white, 556px 891px white, 1889px 567px white,
+			223px 234px white, 1556px 678px white, 889px 123px white, 1323px 891px white,
+			423px 567px white, 1756px 234px white, 656px 789px white, 1189px 456px white,
+			956px 891px white, 1489px 678px white, 289px 234px white, 1623px 567px white,
+			723px 891px white, 1256px 123px white, 489px 678px white, 1823px 234px white,
+			189px 456px white, 1556px 891px white, 856px 234px white, 1389px 678px white,
+			523px 567px white, 1756px 891px white, 289px 789px white, 1089px 456px white,
+			823px 123px white, 1456px 234px white, 589px 891px white, 1223px 678px white,
+			356px 456px white, 1689px 234px white, 923px 789px white, 1423px 891px white,
+			256px 567px white, 1789px 456px white, 689px 123px white, 1156px 891px white;
+		animation: twinkle 8s infinite;
+		z-index: 0;
+		pointer-events: none;
+	}
+
+	/* Second layer of stars - medium stars with slight transparency */
+	body::after {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 2px;
+		height: 2px;
+		background: transparent;
+		box-shadow: 
+			567px 345px #ffffffcc, 1423px 678px #ffffffcc, 892px 912px #ffffffcc, 1756px 234px #ffffffcc,
+			234px 789px #ffffffcc, 1589px 456px #ffffffcc, 723px 123px #ffffffcc, 1256px 891px #ffffffcc,
+			1089px 567px #ffffffcc, 456px 234px #ffffffcc, 1823px 789px #ffffffcc, 589px 678px #ffffffcc,
+			1356px 123px #ffffffcc, 823px 891px #ffffffcc, 1623px 456px #ffffffcc, 289px 567px #ffffffcc,
+			1189px 234px #ffffffcc, 956px 789px #ffffffcc, 1489px 891px #ffffffcc, 389px 123px #ffffffcc,
+			1723px 567px #ffffffcc, 656px 234px #ffffffcc, 1356px 789px #ffffffcc, 889px 456px #ffffffcc,
+			1556px 123px #ffffffcc, 223px 891px #ffffffcc, 1823px 345px #ffffffcc, 523px 678px #ffffffcc,
+			1289px 912px #ffffffcc, 789px 234px #ffffffcc, 1456px 567px #ffffffcc, 356px 891px #ffffffcc,
+			1689px 678px #ffffffcc, 923px 123px #ffffffcc, 1189px 789px #ffffffcc, 489px 456px #ffffffcc,
+			1756px 891px #ffffffcc, 623px 234px #ffffffcc, 1389px 567px #ffffffcc, 856px 789px #ffffffcc;
+		animation: twinkle 6s infinite reverse;
+		z-index: 0;
+		pointer-events: none;
+	}
+
+	@keyframes twinkle {
+		0%, 100% { opacity: 0.8; }
+		50% { opacity: 0.4; }
+	}
+</style>
