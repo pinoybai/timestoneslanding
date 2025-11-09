@@ -3,7 +3,7 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://pinoybai.github.io",
-  base: "/timestoneslanding",
+  site: "https://timestones.today",
+  base: "/",
   output: "static",
 });
